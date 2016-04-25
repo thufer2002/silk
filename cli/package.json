@@ -1,0 +1,51 @@
+{
+  "name": "silk-cli",
+  "version": "0.15.0",
+  "description": "Silk Developer CLI",
+  "repository": "silklabs/silk",
+  "bugs": {
+    "url": "https://github.com/silklabs/silk/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "PATH=$PWD/node_modules/.silk-node/bin:$PATH mocha $(find test -name '*_test.js')",
+    "lint": "eslint src test main.js bootstrap",
+    "flow": "flow check",
+    "postinstall": "./bootstrap",
+    "posttest": "./posttest",
+    "prepublish": "./prepublish"
+  },
+  "bin": {
+    "silk": "./silk"
+  },
+  "keywords": [
+    "cli",
+    "silk",
+    "iot"
+  ],
+  "author": "Silk Labs Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.4.5",
+    "babel-eslint": "4.1.8",
+    "babel-plugin-transform-runtime": "6.4.3",
+    "eslint": "1.10.3",
+    "flow-bin": "0.23.0",
+    "mocha": "2.4.5"
+  },
+  "dependencies": {
+    "argparse": "1.0.4",
+    "babel-runtime": "6.3.19",
+    "cli-color": "1.1.0",
+    "debug": "2.2.0",
+    "json5": "0.4.0",
+    "look-up": "0.8.3",
+    "mkdirp-promise": "1.0.3",
+    "mz": "2.3.1",
+    "prompt": "^0.2.14",
+    "resolve": "1.1.7"
+  }
+}
